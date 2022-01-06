@@ -1,6 +1,6 @@
 using System;
 
-namespace RazomSoftware
+namespace FileUploader
 {
     public static class SafeEnvironment
     {

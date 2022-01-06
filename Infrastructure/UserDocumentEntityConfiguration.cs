@@ -1,10 +1,10 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using RazomSoftware.Entity;
-using RazomSoftware.Infrastructure.Types;
+using FileUploader.Entity;
+using FileUploader.Infrastructure.Types;
 
-namespace RazomSoftware.Infrastructure
+namespace FileUploader.Infrastructure
 {
     public class UserDocumentEntityConfiguration :IEntityTypeConfiguration<UserFile>
     {

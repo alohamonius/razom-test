@@ -2,11 +2,11 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using RazomSoftware.Controllers;
-using RazomSoftware.Entity;
-using RazomSoftware.Infrastructure.Types;
+using FileUploader.Controllers;
+using FileUploader.Entity;
+using FileUploader.Infrastructure.Types;
 
-namespace RazomSoftware.Infrastructure
+namespace FileUploader.Infrastructure
 {
     public interface IApplicationDbContext : IDisposable
     {

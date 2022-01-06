@@ -7,11 +7,11 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
   
 WORKDIR /src
 COPY . /src
-RUN dotnet restore "RazomSoftware.csproj"
-RUN dotnet build "RazomSoftware.csproj" -c Release -o /app/build
+RUN dotnet restore "FileUploader.csproj"
+RUN dotnet build "FileUploader.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "RazomSoftware.csproj" -c Release -o /app/publish
+RUN dotnet publish "FileUploader.csproj" -c Release -o /app/publish
 
 FROM node as node-builder
 RUN apt-get update && apt-get install -y curl
@@ -30,4 +30,4 @@ RUN mkdir /app/wwwroot
 
 COPY --from=publish /app/publish .
 COPY --from=node-builder ./node/build ./wwwroot
-ENTRYPOINT ["dotnet", "RazomSoftware.dll"]
+ENTRYPOINT ["dotnet", "FileUploader.dll"]

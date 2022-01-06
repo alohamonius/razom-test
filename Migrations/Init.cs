@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace RazomSoftware.Migrations
+namespace FileUploader.Migrations
 {
     public partial class Init : Migration
     {

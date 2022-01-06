@@ -1,7 +1,7 @@
 using System;
-using RazomSoftware.Entity;
+using FileUploader.Entity;
 
-namespace RazomSoftware.Infrastructure.Types
+namespace FileUploader.Infrastructure.Types
 {
     public sealed class UserFileViewModel
     {

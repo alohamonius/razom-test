@@ -1,6 +1,6 @@
 using System;
 
-namespace RazomSoftware.Entity
+namespace FileUploader.Entity
 {
     public sealed class UserFile 
     {

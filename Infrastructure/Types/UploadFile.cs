@@ -1,4 +1,4 @@
-namespace RazomSoftware.Infrastructure.Types
+namespace FileUploader.Infrastructure.Types
 {
     public sealed class UploadFile
     {

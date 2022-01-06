@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using RazomSoftware.Entity;
-using RazomSoftware.Infrastructure.Types;
+using FileUploader.Entity;
+using FileUploader.Infrastructure.Types;
 
-namespace RazomSoftware.Infrastructure.Repository
+namespace FileUploader.Infrastructure.Repository
 {
-    public interface IFileRepository : IDisposable
+    public interface IFileRepository
     {
         Task<IEnumerable<UserFileViewModel>> GetAllAsync();
         Task<UserFile> GetDetailedAsync(Guid fileName);

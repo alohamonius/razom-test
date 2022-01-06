@@ -9,11 +9,11 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Net.Http.Headers;
-using RazomSoftware.Entity;
-using RazomSoftware.Infrastructure.Repository;
-using RazomSoftware.Infrastructure.Types;
+using FileUploader.Entity;
+using FileUploader.Infrastructure.Repository;
+using FileUploader.Infrastructure.Types;
 
-namespace RazomSoftware.Controllers
+namespace FileUploader.Controllers
 {
     [ApiController]
     [Route("[controller]")]
@@ -35,16 +35,6 @@ namespace RazomSoftware.Controllers
             var document = await _fileRepository.GetDetailedAsync(fileId);
 
             return document == null ? new NotFoundResult() : new ObjectResult(Map(document.Content));
-        }
-
-        [HttpGet("{fileId:guid}/idea")]
-        [Consumes("text/plain")]
-        public async Task<HttpResponseMessage> ContentIdea1(Guid fileId)
-        {
-            var document = await _fileRepository.GetDetailedAsync(fileId);
-            Stream stream = new MemoryStream(document.Content);
-            var resp = new HttpResponseMessage(HttpStatusCode.OK);
-            return resp;
         }
 
         [HttpPost]

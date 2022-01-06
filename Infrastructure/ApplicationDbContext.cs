@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using RazomSoftware.Entity;
-using RazomSoftware.Infrastructure.Types;
+using FileUploader.Entity;
+using FileUploader.Infrastructure.Types;
 
-namespace RazomSoftware.Infrastructure
+namespace FileUploader.Infrastructure
 {
     public class ApplicationDbContext : DbContext, IApplicationDbContext
     {

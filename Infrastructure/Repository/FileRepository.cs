@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using RazomSoftware.Entity;
-using RazomSoftware.Infrastructure.Types;
+using FileUploader.Entity;
+using FileUploader.Infrastructure.Types;
 
-namespace RazomSoftware.Infrastructure.Repository
+namespace FileUploader.Infrastructure.Repository
 {
     public sealed class FileRepository : IFileRepository
     {
@@ -43,25 +43,6 @@ namespace RazomSoftware.Infrastructure.Repository
             if (toDelete == null) throw new Exception($"Some db exception : {id}");
             _applicationContext.UserFiles.Remove(toDelete);
             await _applicationContext.SaveChangesAsync();
-        }
-
-        private bool _disposed;
-
-        private void Dispose(bool disposing)
-        {
-            if (!_disposed)
-            {
-                if (disposing)
-                    _applicationContext.Dispose();
-            }
-
-            _disposed = true;
-        }
-
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
         }
     }
 }

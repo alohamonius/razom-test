@@ -10,11 +10,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using RazomSoftware.Controllers;
-using RazomSoftware.Infrastructure;
-using RazomSoftware.Infrastructure.Repository;
+using FileUploader.Controllers;
+using FileUploader.Infrastructure;
+using FileUploader.Infrastructure.Repository;
 
-namespace RazomSoftware
+namespace FileUploader
 {
     public class Startup
     {

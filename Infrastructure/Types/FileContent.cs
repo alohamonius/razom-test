@@ -1,6 +1,6 @@
 using System;
 
-namespace RazomSoftware.Infrastructure.Types
+namespace FileUploader.Infrastructure.Types
 {
     public sealed record FileContent
     {
